@@ -1,7 +1,7 @@
 import java.util.ArrayList;
 
 public class profile_Doctor {
-    // personal information :
+    //personal information :
     private  String  first_name ;
     private  String  last_name ;
     private  String  Email ;
@@ -17,13 +17,11 @@ public class profile_Doctor {
     // education section
     private ArrayList <education_section> education ;
 
-    // Adress Section
+    // Adderess Section
     private ArrayList <Address> Adress ;
 
     // Specialization_Section
     private ArrayList<Specialization_Section > Specialization ;
-
-
 
     public String getFirst_name() {
         return first_name;
