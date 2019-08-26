@@ -1,81 +1,78 @@
-import java.util.Scanner;
+import java.util.ArrayList;
 
 interface Buldier {
-    public void buildPersonalInformation();
-
+    public void buildprofile_Doctor();
     public void buildEducation();
-
-    public void buildspecialization();
-
+    public void buildAddress();
     public Dentise getDentise();
-
 }
-public class BuilderDensite implements Buldier {
-    private Dentise Dentise;
-    public BuilderDensite (){
-        this.Dentise= new Dentise();
+ class SpecialistDentist implements Buldier {
+    private Dentise dentise;
+    private profile_Doctor profile_doctor;
+    private ArrayList<education_section> education_section;
+    private ArrayList<Address> address;
+    private ArrayList<Specialization_Section> Specialization_section;
+    public SpecialistDentist(profile_Doctor profile_doctor, ArrayList<education_section> education_section, ArrayList<Address> addresse, ArrayList<Specialization_Section> Specialization_section) {
+        this.dentise = new Dentise();
+        this.profile_doctor= profile_doctor;
+        this.education_section=education_section;
+        this.address=addresse;
+        this.Specialization_section=Specialization_section;
     }
 
     @Override
-    public void buildPersonalInformation() {
-        Dentise.setPersonalInformation("First Name = ");
-        Dentise.setPersonalInformation("Last Name  = ");
-        Dentise.setPersonalInformation("E-mail = ");
-        Dentise.setPersonalInformation("Website = ");
-        Dentise.setPersonalInformation("Phone_number = ");
-        Dentise.setPersonalInformation("License Country Name = ");
-        Dentise.setPersonalInformation("License Number = ");
-        Dentise.setPersonalInformation("Years in Practice = ");
-        Dentise.setPersonalInformation("Gender = ");
+    public void buildprofile_Doctor() {
+     dentise.setprofile_Doctor(profile_doctor);
     }
 
     @Override
     public void buildEducation() {
-        Dentise.setEducation("Degree = " );
-        Dentise.setEducation("Mojor = ");
-        Dentise.setEducation("school = ");
-        Dentise.setEducation("year = ");
+dentise.seteducation_section(education_section);
     }
 
     @Override
-    public void buildspecialization() {
-        Dentise.setspecialization("Area_of_Specialization = ");
-        Dentise.setspecialization("Start_year = ");
+    public void buildAddress() {
+dentise.setAddress(address);
     }
-
+    public void buildSpecializationArea() {
+        dentise.setSpecialization_section(Specialization_section);
+    }
     @Override
     public Dentise getDentise() {
-        return this.getDentise();
+        return dentise;
     }
 }
-class TipiDentiseBuilder implements Buldier{
-    private Dentise Dentise;
-    public TipiDentiseBuilder (){
-        this.Dentise= new Dentise();
+class  GeneralDentist implements Buldier{
+    private Dentise dentise;
+    private profile_Doctor profile_doctor;
+    private ArrayList<education_section> education_section;
+    private ArrayList<Address> address;
+    public GeneralDentist(profile_Doctor profile_doctor, ArrayList<education_section> education_section, ArrayList<Address> addresse) {
+        this.dentise = new Dentise();
+        this.profile_doctor= profile_doctor;
+        this.education_section=education_section;
+        this.address=addresse;
     }
 
     @Override
-    public void buildPersonalInformation() {
-        Scanner keyboard = new Scanner(System.in);
-        System.out.println("Degree = ");
-        int degree = keyboard.nextInt();
-
-        Dentise.setPersonalInformation("");
-
+    public void buildprofile_Doctor() {
+        dentise.setprofile_Doctor(profile_doctor);
     }
 
     @Override
     public void buildEducation() {
-
+dentise.seteducation_section(education_section);
     }
 
     @Override
-    public void buildspecialization() {
-
+    public void buildAddress() {
+dentise.setAddress(address);
     }
 
     @Override
     public Dentise getDentise() {
-        return this.Dentise;
+        return this.dentise;
     }
 }
+
+

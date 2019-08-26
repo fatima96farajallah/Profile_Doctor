@@ -1,10 +1,17 @@
 public class Address {
     private String  country;
-    private  String Stare;
+    private  String State;
     private  String city;
     private  String street;
     private  String postalCode;
 
+    public Address(String country, String state, String city, String street, String postalCode) {
+        this.country = country;
+        this.State = state;
+        this.city = city;
+        this.street = street;
+        this.postalCode = postalCode;
+    }
     public String getCountry() {
         return country;
     }
@@ -14,11 +21,11 @@ public class Address {
     }
 
     public String getStare() {
-        return Stare;
+        return State;
     }
 
     public void setStare(String stare) {
-        Stare = stare;
+        State = stare;
     }
 
     public String getCity() {
@@ -44,8 +51,5 @@ public class Address {
     public void setPostalCode(String postalCode) {
         this.postalCode = postalCode;
     }
-    @Override
-    public String toString() {
-        return "Adress{" + "country=" + country + ", Stare=" + Stare + ", city=" + city + ", street=" + street + ", postalCode=" + postalCode + '}';
-    }
+
 }

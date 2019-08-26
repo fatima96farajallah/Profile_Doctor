@@ -1,9 +1,14 @@
 public class education_section {
     private  String Degree ;
-    private  String Mojor ;
+    private  String Major ;
     private  String school;
-    private String year;
-
+    private int year;
+    public education_section(String degree, String major, String school, int year) {
+        this.Degree = degree;
+        this.Major = major;
+        this.school = school;
+        this.year = year;
+    }
     public String getDegree() {
         return Degree;
     }
@@ -13,11 +18,11 @@ public class education_section {
     }
 
     public String getMojor() {
-        return Mojor;
+        return Major;
     }
 
     public void setMojor(String mojor) {
-        Mojor = mojor;
+        Major = mojor;
     }
 
     public String getSchool() {
@@ -28,15 +33,12 @@ public class education_section {
         this.school = school;
     }
 
-    public String getYear() {
+    public int getYear() {
         return year;
     }
 
-    public void setYear(String year) {
+    public void setYear(int year) {
         this.year = year;
     }
-    @Override
-    public String toString() {
-        return "education_section{" + "Degree=" + Degree + ", Mojor=" + Mojor + ", school=" + school + ", year=" + year + '}';
-    }
+
 }

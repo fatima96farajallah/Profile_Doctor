@@ -6,14 +6,24 @@ public class profile_Doctor {
     private  String  last_name ;
     private  String  Email ;
     private  String  website ;
-    private  String  phone_number ;
+    private  int  phone_number ;
     // Biography Section:
     private  String licence_cuntryname;
-    private  String licence_Number;
-    private  String year_in_practice;
+    private  int licence_Number;
+    private  int year_in_practice;
     private  String gender;
 
-
+public profile_Doctor(String first_name,String last_name,String website, String Email , int phone_number, String licence_cuntryname,int licence_Number , int year_in_practice,String gender){
+    this.first_name=first_name;
+    this.last_name=last_name;
+    this.Email=Email;
+    this.website=website;
+    this.phone_number=phone_number;
+    this.licence_cuntryname=licence_cuntryname;
+    this.licence_Number=licence_Number;
+    this.year_in_practice=year_in_practice;
+    this.gender=gender;
+}
     // education section
     private ArrayList <education_section> education ;
 
@@ -55,11 +65,11 @@ public class profile_Doctor {
         this.website = website;
     }
 
-    public String getPhone_number() {
+    public int getPhone_number() {
         return phone_number;
     }
 
-    public void setPhone_number(String phone_number) {
+    public void setPhone_number(int phone_number) {
         this.phone_number = phone_number;
     }
 
@@ -71,19 +81,19 @@ public class profile_Doctor {
         this.licence_cuntryname = licence_cuntryname;
     }
 
-    public String getLicence_Number() {
+    public int getLicence_Number() {
         return licence_Number;
     }
 
-    public void setLicence_Number(String licence_Number) {
+    public void setLicence_Number(int licence_Number) {
         this.licence_Number = licence_Number;
     }
 
-    public String getYear_in_practice() {
+    public int getYear_in_practice() {
         return year_in_practice;
     }
 
-    public void setYear_in_practice(String year_in_practice) {
+    public void setYear_in_practice(int year_in_practice) {
         this.year_in_practice = year_in_practice;
     }
 
@@ -95,12 +105,9 @@ public class profile_Doctor {
         this.gender = gender;
     }
 
-    @Override
-    public String toString() {
-        return "Profil_Doctor{" + "first_name=" + first_name + ", last_name=" + last_name + ", Email=" + Email + ", website=" + website + ", phone_number=" + phone_number + ", licence_cuntryname=" + licence_cuntryname + ", licence_Number=" + licence_Number + ", year_in_practice=" + year_in_practice + ", gender=" + gender + '}';
-    }
 
-    public ArrayList<education_section> getEducation() {
+
+   /* public ArrayList<education_section> getEducation() {
         return education;
     }
 
@@ -122,5 +129,5 @@ public class profile_Doctor {
 
     public void setSpecialization(ArrayList<Specialization_Section> specialization) {
         Specialization = specialization;
-    }
+    }*/
 }
